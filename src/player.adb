@@ -11,7 +11,7 @@ package body Player is
    procedure Init (P : in out Object; Ren : SDL.Video.Renderers.Renderer) is
       Surface : SDL.Video.Surfaces.Surface;
    begin
-      SDL.Images.IO.Create (Surface, "res\player.png");
+      SDL.Images.IO.Create (Surface, "res/player.png");
       SDL.Video.Textures.Makers.Create (P.Sheet.Texture, Ren, Surface);
       SDL.Video.Surfaces.Finalize (Surface);
 

@@ -1,0 +1,23 @@
+with "config/loop_of_life_config.gpr";
+
+project Loop_Of_Life is
+
+   for Source_Dirs use ("src/", "config/");
+   for Object_Dir use "obj/" & Loop_Of_Life_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use "bin";
+   for Main use ("loop_of_life.adb");
+
+   package Compiler is
+      for Default_Switches ("Ada") use Loop_Of_Life_Config.Ada_Compiler_Switches;
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
+
+end Loop_Of_Life;

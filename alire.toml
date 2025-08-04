@@ -1,0 +1,38 @@
+name = "loop_of_life"
+description = "source code for my gmtk 2025 submission Loop of Life"
+version = "0.1.0-dev"
+
+authors = ["SabeDoesThings"]
+maintainers = ["Manuel Gomez <mgrojo@gmail.com>"]
+maintainers-logins = ["mgrojo"]
+licenses = "custom-unknown"
+website = "https://sabedoesthings.itch.io/loop-of-life"
+tags = ["game", "gmtk", "2d", "pixel-art"]
+
+executables = ["loop_of_life"]
+
+[[pins]]
+
+[build-switches]
+"*".Ada_Version = "Ada2022"
+
+[[pins]]
+sdlada = { url='https://github.com/ada-game-framework/sdlada.git' }
+
+[[depends-on]]
+sdlada_image = "~0.1.0-dev"
+
+[[pins]]
+sdlada_image = { url='https://github.com/ada-game-framework/sdlada_image.git' }
+
+[[depends-on]]
+sdlada_ttf = "~0.1.0-dev"
+
+[[pins]]
+sdlada_ttf = { url='https://github.com/ada-game-framework/sdlada_ttf.git' }
+
+[[depends-on]]
+sdlada_mixer = "^2.5.22"
+
+[[pins]]
+sdlada_mixer = { url='https://github.com/ada-game-framework/sdlada_mixer.git' }
