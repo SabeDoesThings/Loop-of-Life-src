@@ -9,6 +9,8 @@ licenses = "custom-unknown"
 website = "https://sabedoesthings.itch.io/loop-of-life"
 tags = ["game", "gmtk", "2d", "pixel-art"]
 
+executables = ["loop_of_life"]
+
 [[pins]]
 
 [build-switches]
